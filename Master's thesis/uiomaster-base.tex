@@ -1,0 +1,106 @@
+\documentclass[UKenglish, final]{uiomasterbeta}  %% ... or norsk or nynorsk or USenglish
+                                      %% ... add option 'final' to remove showkeys
+\usepackage[utf8]{inputenc}           %% ... or latin1
+\usepackage[T1]{url}\urlstyle{sf}
+\usepackage{babel, csquotes, graphicx, textcomp, uiomasterfp, varioref}
+\usepackage[backend=biber,
+    sortcites  = true,
+    giveninits = true,
+    %doi = false,
+    isbn = false,
+    url = false,
+   %sortlocale = nb_NO, %% ... known bug in biblatex - to be resolved
+    citestyle=phys,
+    style=phys]{biblatex} %% ... phys by AIP
+    %% For alternatives, see https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+% \DeclareNameAlias{sortname}{family-given} 
+% \DeclareNameAlias{default}{family-given} %% ... Wiles, A. instead of A. Wiles.
+\usepackage[hidelinks]{hyperref}
+\usepackage{kantlipsum}  
+\usepackage{booktabs}
+\usepackage{microtype}
+\microtypesetup{protrusion = false}
+
+\usepackage{physicspreamble}
+
+\title{Nuclear excitation functions for medical isotope production}       %% ... or whatever
+\subtitle{Targeted radionuclide therapy via $^{\text{nat}}\text{Zr}(d,x)^{86,88,90}\text{Y}$}         %% ... if any
+\author{Elise Malmer Martinsen}                      %% ... or whoever 
+
+\addbibresource{mybib.bib}            %% ... or whatever
+
+
+\begin{document}
+\uiomasterfp[dept={Department of Physics},  %% ... or your department
+  program={Physics},                        %% ... or your study program
+  % supervisor={Sunniva Siem, Andrew Voyles and \newline Kevin Ching Wei Li },                    %% ... or blank
+  supervisors={Sunniva Siem \and Andrew Voyles \and Kevin Ching Wei Li},     %% if more than one
+  master,                                   %% ... or bachelor
+  long,                                      %% ... or short
+  color=pink]                                  %%... color options  
+
+\frontmatter{}
+    \include{sections/abstract}
+     \include{sections/sammendrag}
+
+\tableofcontents{}
+\markboth{}{} %% removes header from pages
+ \cleardoublepage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\markboth{}{}  %% removes header from pages
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\markboth{}{} %% removes header from pages
+
+  \include{sections/preface}
+  % \cleardoublepage %% May need this if longer than one page
+  \include{sections/acknowledgements}
+  % \cleardoublepage %% May need this if longer than one page
+
+\mainmatter{}
+
+\part{Introduction}                   %% ... Innledning or Innleiing
+\label{intro}
+\begin{refsection}
+    \include{sections/introduction}
+   %    \printbibliography[heading=bibintoc,title={References}]
+\end{refsection}
+
+\part{First research problem}                    %% ... or ??
+\label{p1}
+    \begin{refsection} % empty pages are removed with 'final'
+    \include{sections/imrad1intro}
+    \include{sections/imrad1theory}
+    \include{sections/imrad1stoppingpower}
+    \include{sections/imrad1experimental}
+    \include{sections/imrad1analysis}
+    \include{sections/imrad1results}
+    \include{sections/imrad1discussion}
+    \printbibliography[heading=bibintoc,title={References}]
+\end{refsection}
+
+\part{Second research problem}                     %% ... or ??
+\label{p2}
+\todo[inline]{Work in progress! Need to ask supervisor about this!}
+\begin{refsection}
+  \include{}
+ %    \printbibliography[heading=bibintoc,title={References}]
+\end{refsection}
+
+\part{Conclusion}
+\label{conc}
+\begin{refsection}
+  \include{sections/conclusion}
+ %    \printbibliography[heading=bibintoc,title={References}]
+\end{refsection}
+
+\backmatter{}
+    \appendix % "Chapter" is renamed "Appendix"
+    \begin{refsection}
+    \part*{Appendices}
+    \include{sections/appendixA}
+    \include{sections/appendixB}
+ %    \printbibliography[heading=bibintoc,title={References}]
+\end{refsection}
+\end{document}

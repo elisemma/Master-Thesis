@@ -1,0 +1,37 @@
+\chapter{Stopping power}
+\label{p1:stoppingpower}
+
+\section{Stopping power calculations}
+The aim of this part of the project was to improve the parameters used in the Ziegler parameterization used to calculate stopping power for charged particles in different materials. The Ziegler parameterization is from the 1970s and is a semi empirical model where some parameters were fitted to all the data available in the 1970s. A lot of new data has been collected since the model was made, and therefore we wanted to use all the stacked target measurements obtainable to make a new and improved fit of the parameters in the Ziegler model.  
+
+\subsection{Energy determination}
+To calculate the stopping power, we need to determine the energies of the different foils in all the stacked target experiments. The energies of the foils are already given in the published articles, but we want to determine the energies our self. The reason for this, is that most of the codes used to determine the energies listed in the articles are using the Ziegler parameterization. To avoid a circular argument, we therefore want to use other methods which don't use the Zielger model to find the energies. 
+\vspace{3mm}
+\\
+The method we chose to determine the energies of the foils is called the Isotope cross section method. In this method we use the IAEA database to plot the ratio of the cross sections for two different monitor reactions that are seen in the same foil. We also plot the cross section ratios of the monitor reactions given by
+\begin{equation}
+    \frac{\sigma}{\sigma'} = \frac{A_0 / (1-\exp{-\lambda \Delta_{t_irr}})}{A_0' / (1-\exp{-\lambda' \Delta_{t_irr}})} = \frac{A_0(1-\exp{-\lambda' \Delta_{t_irr}})}{A_0' (1-\exp{-\lambda \Delta_{t_irr}})}
+\end{equation}
+
+where lalalalal.\todo{Write what all params are and add the actual xs forumla}
+The energy of a foil is then given by the crossing point of the IAEA ratio and the experimental cross section ratio. 
+\vspace{3mm}
+\\
+The uncertainty of the calculated cross section ratios are calculated from the measurement uncertainties of the radiation time and the end of beam activities. \todo{which formula is used to calculate the uncertainty}
+
+\subsection{Calculating the stopping power}
+After the energy in all the monitor foils is calculated, we can determine the stopping power given by
+\begin{equation}
+    S = -\frac{\Delta E}{\Delta x}
+\end{equation}
+where $\Delta E$ is the energy difference between the two foils and $\Delta x$ is the length between the two energy points. There is some uncertainty associated with the $\Delta x$ as it is not clear exactly where in the foils the energies we measure are. The monitor foils have a given thickness, and therefore we somehow have to determine which position in the foils corresponds to the energies determined. As a starting point we assumed that the energy of a foil corresponds to the middle of the foil. $\Delta x$ is therefore half of the thickness of the first monitor foil plus half of the thickness of the other monitor foil added with the thickness of the other foils and degraders in between the monitor foils, if any. 
+\vspace{3mm}
+\\
+Diskuter hvorfor det gikk galt her
+
+
+
+
+
+
+
