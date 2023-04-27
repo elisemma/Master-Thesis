@@ -13,11 +13,11 @@ The method we chose to determine the energies of the foils is called the Isotope
     \frac{\sigma}{\sigma'} = \frac{A_0 / (1-\exp{-\lambda \Delta_{t_irr}})}{A_0' / (1-\exp{-\lambda' \Delta_{t_irr}})} = \frac{A_0(1-\exp{-\lambda' \Delta_{t_irr}})}{A_0' (1-\exp{-\lambda \Delta_{t_irr}})}
 \end{equation}
 
-where lalalalal.\todo{Write what all params are and add the actual xs forumla}
+where lalalalal.
 The energy of a foil is then given by the crossing point of the IAEA ratio and the experimental cross section ratio. 
 \vspace{3mm}
 \\
-The uncertainty of the calculated cross section ratios are calculated from the measurement uncertainties of the radiation time and the end of beam activities. \todo{which formula is used to calculate the uncertainty}
+The uncertainty of the calculated cross section ratios are calculated from the measurement uncertainties of the radiation time and the end of beam activities. 
 
 \subsection{Calculating the stopping power}
 After the energy in all the monitor foils is calculated, we can determine the stopping power given by
@@ -27,7 +27,10 @@ After the energy in all the monitor foils is calculated, we can determine the st
 where $\Delta E$ is the energy difference between the two foils and $\Delta x$ is the length between the two energy points. There is some uncertainty associated with the $\Delta x$ as it is not clear exactly where in the foils the energies we measure are. The monitor foils have a given thickness, and therefore we somehow have to determine which position in the foils corresponds to the energies determined. As a starting point we assumed that the energy of a foil corresponds to the middle of the foil. $\Delta x$ is therefore half of the thickness of the first monitor foil plus half of the thickness of the other monitor foil added with the thickness of the other foils and degraders in between the monitor foils, if any. 
 \vspace{3mm}
 \\
-Diskuter hvorfor det gikk galt her
+This method did not work as well as we expected. The stopping power values we got did not agree with our expectations, and we even got some negative values for the stopping power. The reason for this, is that the uncertainty in our energy calculations had big uncertainties. For some foils the uncertainty in energy was bigger than the difference in energy between the foil and the neighboring foil in the stack.
+
+
+
 
 
 

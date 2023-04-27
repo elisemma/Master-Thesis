@@ -5,10 +5,10 @@ Summarize the chapter: what is described in the different sections?
 
 \section{The stacked target activation method}
 \section{Lawrence Berkeley National Laboratory's 88 Inch Cyclotron}
-\section{Foil characterization}
+\section{Stack design}
 
 
-\begin{table}[htbp]\todo{SS and uncertainty of areal dens for Ni }
+\begin{table}[h!]%[htbp]
     \centering
     \label{Tab:foilcharacterization}
        \caption[Foil characterization]{The table shows the characteristics of each foil and the calculated areal densities. All lengths are measured in mm and masses are measured in g. The areal densities are given in mg/cm$^2$. The foils are listed in the same order they were irradiated and the horizontal lines divide the foils into compartments.}
@@ -46,6 +46,26 @@ Summarize the chapter: what is described in the different sections?
         \bottomrule
     \end{tabular}
 \end{table}
+\section{HPGe detectors}
+\section{Gamma-ray spectroscopy}
+\subsection{Energy and peak shape calibration}
+To find the corresponding energy for each channel number, energy calibration had to be done. The calibration point sources $^{133}$Ba ($t_{1/2} = XXX \pm$), $^{137}$Cs ($t_{1/2} = XXX \pm $), $^{56}$Co ($t_{1/2} = XXX \pm $) and $^{152}$Eu ($t_{1/2} = XXX \pm$) were used in this calibration, and can be seen in figure XXX. This sources have peaks with well known energies and are standard calibration sources for HPGe detectors. The gamma lines which were used in the calibration is listed in table XXX. 
+\vspace{3mm}
+\\
+The detectors were calibrated at every distance the targets were counted. Unfortunately, not all the calibration sources were counted in every distance the targets were counted, but the $^{152}$Eu point source was measured at every distance. This calibration source alone has many well known energies, and can therefore be used for calibration alone. 
+\vspace{3mm}
+\\
+For most HPGe detectors, including the ones used in this experiment, the relation between the energy and channel number is linear, and given by
+\begin{equation}
+    E = a + b\cdot C
+\end{equation}
+where $a$ is the intercept, $b$ is the slope of the line and $C$ is the channel number. The energy and peak shape calibration was done in Curie. 
+
+\subsection{Efficiency calibration}
+Intrinsic and geometric, every distance, write the formula 
+
+
+
 
 \section{The irradiation}
 The irradiation of the stacked targets was performed at the Lawrence Berkeley National Laboratory \todo{burde faktisk dobbeltsjekke dette} on the 13th of February 2017, and lasted for 20 minutes ($1200 \pm 3$ s). \todo{I just guessed the uncertainty} After the end of beam the foils were counted for five weeks. 
